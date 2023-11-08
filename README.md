@@ -12,12 +12,12 @@ Projeto da faculdade para desenvolver um algoritmo que realize: Análise Textual
 
 Bibliotecas necessárias para instalar antes de rodar o projeto: 
 
-Essa biblioteca nos ajudará a remover as stop words, além de deixar tudo em letra minúscula.
+Essa biblioteca nos ajudará a remover as stop words, além de deixar tudo em letra minúscula.<br>
 `pip install nltk`
 
-Já o unidecode vai nos auxiliar em retirar a acentuação de todas as palavras.
+Já o unidecode vai nos auxiliar em retirar a acentuação de todas as palavras. <br>
 `pip install unidecode`
 
-Para a criação do grafo, vamos utilizar o networkx. Já que com ele vamos conseguir calcular as metricas e visualizar o grafo visualmente.
+Para a criação do grafo, vamos utilizar o networkx. Já que com ele vamos conseguir calcular as metricas e visualizar o grafo visualmente.<br>
 `pip install networkx`
 
