@@ -34,7 +34,6 @@ def processar_resumo(resumo):
         palavras_divididas = dividir_palavras(frase)
 
         # Remove as stop words e converte e faz a conversão para letras minúsculas atraves da biblioteca unidecode
-        # ***** retirar biblioteca unidecode e criar função para deixar as letras minusculas manualmente *****
         palavras.extend([unidecode(token.lower()) for token in palavras_divididas if token.lower() not in stop_words])
     print(palavras)
     return palavras
@@ -58,9 +57,6 @@ if nome_arquivo in arquivos:
         identificar_topicos = vetorizar.fit_transform([' '.join(resumo_processado)])
         modelo_nmf = NMF(n_components = 5)
         modelo_nmf.fit(identificar_topicos)
-
-        # Mapear tópicos e palavras-chave 
-        #topicos[nome_arquivo] = [f'Tópico {i}' for i in range(len(modelo_nmf.components_))]
 
     # Construção do grafo de tópicos da biblioteca networkx
     G = nx.Graph()
