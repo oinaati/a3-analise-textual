@@ -4,8 +4,6 @@ import nltk
 from nltk.corpus import stopwords
 from unidecode import unidecode
 import networkx as nx
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.decomposition import NMF
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -16,12 +14,10 @@ stop_words = set(stopwords.words('portuguese'))
 diretorio = './a3-analise-textual/BaseDadosResumos'
 arquivos = os.listdir(diretorio)
 
-#Função para dividir o resumo em frases
 def dividir_frases(resumo):
     frases = resumo.split('.')
     return frases
 
-#Função para dividir as frases em palavras
 def dividir_palavras(frase):
     palavras = frase.split()
     return palavras
@@ -35,7 +31,6 @@ def processar_resumo(resumo):
 
         # Remove as stop words e converte e faz a conversão para letras minúsculas atraves da biblioteca unidecode
         palavras.extend([unidecode(token.lower()) for token in palavras_divididas if token.lower() not in stop_words])
-    print(palavras)
     return palavras
 
 topicos = {}
@@ -51,12 +46,6 @@ if nome_arquivo in arquivos:
         palavras_chaves = linhas[2]
 
         resumo_processado = processar_resumo(resumo)
-
-        # Identifica tópicos usando NMF
-        vetorizar = TfidfVectorizer()
-        identificar_topicos = vetorizar.fit_transform([' '.join(resumo_processado)])
-        modelo_nmf = NMF(n_components = 5)
-        modelo_nmf.fit(identificar_topicos)
 
     # Construção do grafo de tópicos da biblioteca networkx
     G = nx.Graph()
