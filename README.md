@@ -10,6 +10,10 @@ Projeto da faculdade para desenvolver um algoritmo que realize: Análise Textual
 * Isabelle Bezerra Capecce - RA: 820140332
 * Natalia Reis - RA: 820142521
 
+**Entrega 1: Identificação de Tópicos Principais** - Concluido
+
+Arquivo: analisar-texto.py
+
 Bibliotecas necessárias para instalar antes de rodar o projeto: 
 
 Essa biblioteca nos ajudará a remover as stop words, além de deixar tudo em letra minúscula.<br>
@@ -20,4 +24,10 @@ Já o unidecode vai nos auxiliar em retirar a acentuação de todas as palavras.
 
 Para a criação do grafo, vamos utilizar o networkx. Já que com ele vamos conseguir calcular as metricas e visualizar o grafo visualmente.<br>
 `pip install networkx`
+
+**Entrega 2: Análise das Redes de Coautoria** - Em Progresso
+
+**Entrega 3: Medição da Similaridade entre Textos** - Em Progresso
+
+**Entrega 4: Avaliação da eficiência das soluções algorítmicas encontradas** - Em Progresso
 
