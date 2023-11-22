@@ -13,6 +13,7 @@ Projeto da faculdade para desenvolver um algoritmo que realize: Análise Textual
 **Entrega 1: Identificação de Tópicos Principais** - Concluido
 
 Arquivo: analisar-texto.py
+
 Dados: BaseDadosResumos
 
 Bibliotecas necessárias para instalar antes de rodar o projeto: 
@@ -29,6 +30,7 @@ Para a criação do grafo, vamos utilizar o networkx. Já que com ele vamos cons
 **Entrega 2: Análise das Redes de Coautoria** - Em Analise
 
 Arquivo: analisar-autores.py
+
 Dados: BaseDadosResumoAutores
 
 **Entrega 3: Medição da Similaridade entre Textos** - Em Progresso
